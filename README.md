@@ -74,15 +74,6 @@ broad_QC_task1.cwl
 | `workflow`             | Single CWL Workflow file  | Tasks must be imported separately as `.cwl`      |
 | `task-only WDL`        | Separate CWL per task     | No `workflow {}` block required                  |
 
-## ⚠️ Notes
-CWL does not support WDL-style conditionals (if) or scatter blocks directly — these are skipped or noted in the steps
-
-All task baseCommands and runtime docker values are captured
-
-Only File and string input/output types are currently supported. Extend convert_task_to_cwl() to add others.
-
-The converter assumes imported WDL files are already local in the specified or current directory
-
 ## 🧪 Tested With
 IlluminaGenotypingArray.wdl + IlluminaGenotypingArrayTasks.wdl from Broad
 
