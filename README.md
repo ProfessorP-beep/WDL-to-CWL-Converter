@@ -74,11 +74,6 @@ broad_QC_task1.cwl
 | `workflow`             | Single CWL Workflow file  | Tasks must be imported separately as `.cwl`      |
 | `task-only WDL`        | Separate CWL per task     | No `workflow {}` block required                  |
 
-## 🧪 Tested With
-IlluminaGenotypingArray.wdl + IlluminaGenotypingArrayTasks.wdl from Broad
-
-Qc.wdl and AggregatedBamQC.wdl from the Seven Bridges CAVATICA platform
-
 ## Contact
 Feel free to fork, submit issues, or contribute to the project.
 
