@@ -52,10 +52,10 @@ broad_QC_task1.cwl
 ...
 
 ## 📁 Output Structure
-| **WDL Input Type**    | **Output Type**              | **Notes**                     |
-|-----------------------|------------------------------|-------------------------------|
-| `workflow + tasks`    | Workflow CWL + Task CWLs     | Tasks are referenced in steps |
-| `task-only WDL`       | Separate CWL per task        | No main `workflow` required   |
+| **WDL Input Type**     | **Output Type**           | **Notes**                                         |
+|------------------------|---------------------------|--------------------------------------------------|
+| `workflow`             | Single CWL Workflow file  | Tasks must be imported separately as `.cwl`      |
+| `task-only WDL`        | Separate CWL per task     | No `workflow {}` block required                  |
 
 ## ⚠️ Notes
 CWL does not support WDL-style conditionals (if) or scatter blocks directly — these are skipped or noted in the steps
