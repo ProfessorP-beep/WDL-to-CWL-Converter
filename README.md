@@ -3,7 +3,7 @@
 This Python tool converts [WDL (Workflow Description Language)](https://openwdl.org/) files into [CWL (Common Workflow Language)](https://www.commonwl.org/) format. It supports **task-only WDLs**, full `workflow` definitions, and `import` statements from external files.
 
 Tested using:
-- Broad Institute's [Illumina Genotyping Array WDLs](https://github.com/broadinstitute/warp/tree/develop/pipelines/broad/IlluminaGenotypingArray)
+- Broad Institute's [Illumina Genotyping Array WDLs](https://github.com/broadinstitute/warp/tree/develop/pipelines/broad/genotyping/illumina)
 - Seven Bridges' [CAVATICA platform CWL workflows](https://cavatica.sbgenomics.com/)
 
 ---
