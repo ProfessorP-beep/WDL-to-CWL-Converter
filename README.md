@@ -28,6 +28,23 @@ Install dependencies with:
 pip install -r requirements.txt
 ```
 ---
+## ⚠️ Important Notes on Execution
+This converter focuses on translating WDL structure into CWL-compatible definitions, but it does not guarantee a fully executable pipeline out of the box.
+
+If your WDL workflow imports tasks (e.g., Broad's IlluminaGenotypingArray workflow), you must:
+
+✅ Convert each imported WDL file (e.g., IlluminaGenotypingArrayTasks.wdl, Qc.wdl) to CWL separately
+
+✅ Ensure all converted .cwl tool files are present in the same directory as the main workflow CWL
+
+⚠️ CWL does not support if, scatter, or dynamic expressions exactly as WDL does. These constructs may be skipped or simplified in conversion.
+
+🔧 You may need to manually adjust input wiring, runtime options, or expression logic for full compatibility
+
+This tool is best used as a starting scaffold to help wrap existing WDL pipelines into CWL format. Final validation and polish is expected before production use.
+
+---
+
 ## How It Works
 - parse_wdl() uses miniwdl to load WDL files and resolve any imports
 - convert_task_to_cwl() converts each task block into a valid CWL CommandLineTool
